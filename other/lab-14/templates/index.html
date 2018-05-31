@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block body %}
+
+{% for twit in twits %}
+ <div class="row">
+  <div class="col-md-4">{{ twit['username'] }}</div>
+  <div class="col-md-4">{{ twit['twit'] }}</div>
+  <div class="col-md-4"><img src="{{ twit['image'] }}" /></div>
+</div> 
+{% endfor %}
+
+
+{% if (username != "no-one") %}
+        <form method="post" action="/add_twit">
+        <p>twit<input type=text name=twit>
+        <p>image<input type=text name=image>
+        <p><input type=submit value='post twit'>
+        </form>
+{% endif %}
+
+
+{% endblock %}

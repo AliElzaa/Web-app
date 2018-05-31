@@ -1,0 +1,114 @@
+{% extends "bootstrap/base.html" %}
+
+
+
+{% block title %}
+
+Ali's to do List
+
+{% endblock %}
+
+
+
+{% block styles %}
+
+{{super()}}
+
+<link rel="stylesheet" href="{{url_for('.static', filename='starter-template.css')}}">
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+{% endblock %}
+
+
+
+{% block content %}
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+
+      <div class="container">
+
+        <div class="navbar-header">
+
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+
+            <span class="sr-only">Toggle navigation</span>
+
+            <span class="icon-bar"></span>
+
+           <span class="icon-bar"></span>
+
+            <span class="icon-bar"></span>
+
+          </button>
+
+          <a class="navbar-brand" href="#">Project name</a>
+
+        </div>
+
+        <div id="navbar" class="collapse navbar-collapse">
+
+          <ul class="nav navbar-nav">
+
+            <li class="active"><a href="#">Home</a></li>
+
+            <li><a href="{{ url_for('login') }}">Login</a></li>
+
+            <li><a href="{{ url_for('signup') }}">Sign Up</a></li>
+             
+            <li><a href="{{ url_for('logout') }}">Log Out</a></li>
+          </ul>
+
+        </div><!--/.nav-collapse -->
+
+      </div>
+
+    </nav>
+    <h1>Welcome {{ name }} </h1>
+ <h1> heres a list of Ali's Daily tasks </h1>
+    <div> Add a new todo item:
+ <form action="{{ url_for('add') }}" method="POST">
+ <input type="text" name="todoitem">
+ <input type="submit" value="Add item">
+ </form>
+</div>
+<div class="container">
+<div class="starter-template">
+  <form action="{{ url_for('update') }}" method="POST">
+   <!-- on <ul> 
+        {% for todo in todos %}
+        <li style="font-size: 30pt"> {{ todo.text}}</li>
+        <a
+  href='/delete_todo/{{ todo.id }}'> delete </a></div>
+
+    {% endfor %}
+    
+-->
+</ul>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">data</th>
+      <th scope="col">function</th>
+    </tr>
+  </thead>
+  <tbody>
+ {% for todo in todos %}
+
+    <tr>
+
+      <th scope="row"> {{ todo.text }} </th>
+<th> <a
+  href='/delete_todo/{{ todo.id }}'> delete </a></div>
+</th>
+    </tr>
+      
+{% endfor %}
+</table>
+     <input type="submit" value="update Items">
+  </form>
+</div>
+    </div> <!---/.container -->
+{% endblock %}
+

@@ -1,0 +1,15 @@
+ * Running on http://0.0.0.0:8000/ (Press CTRL+C to quit)
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 334-739-182
+158.223.1.108 - - [06/Apr/2018 18:52:21] "GET / HTTP/1.1" 200 -
+158.223.1.108 - - [06/Apr/2018 18:52:22] "GET / HTTP/1.1" 200 -
+158.223.1.108 - - [06/Apr/2018 18:52:26] "GET / HTTP/1.1" 200 -
+158.223.1.108 - - [06/Apr/2018 18:53:09] "GET / HTTP/1.1" 200 -
+158.223.1.108 - - [06/Apr/2018 18:53:15] "GET / HTTP/1.1" 200 -
+158.223.1.108 - - [06/Apr/2018 18:55:07] "GET / HTTP/1.1" 200 -
+158.223.1.108 - - [06/Apr/2018 18:55:09] "GET / HTTP/1.1" 200 -
+ * Detected change in '/home/aelza001/term-2-lab/ownapp/app.py', reloading
+ * Restarting with stat
+158.223.1.108 - - [06/Apr/2018 18:57:47] "GET / HTTP/1.1" 200 -
+158.223.1.108 - - [06/Apr/2018 18:57:50] "GET / HTTP/1.1" 200 -
